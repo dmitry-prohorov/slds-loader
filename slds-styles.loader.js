@@ -34,17 +34,22 @@ var styles = [
 var components = {
   // Activity Timeline
   "activity-timeline" : [
-    "activity-timeline/flavors/base/index"
+    "activity-timeline/index"
+  ],
+
+  // Badges
+  "badges": [
+    "badges/index"
   ],
 
   // Breadcrumbs
   "breadcrumbs": [
-    "breadcrumbs/flavors/base/index"
+    "breadcrumbs/index"
   ],
 
   // Button Groups
   "button-groups": [
-    "button-groups/flavors/base/index"
+    "button-groups/index"
   ],
 
   // Button
@@ -56,19 +61,19 @@ var components = {
 
   // Icons
   "icons": [
-    "icons/flavors/base/index",
+    "icons/index",
     "icons/flavors/icon-colors/index",
-    "icons/flavors/background-colors/index",
     "icons/flavors/sizes/index"
   ],
 
   // Card
   "cards": [
-    "cards/flavors/base/index"
+    "cards/index"
   ],
 
   // Forms
   "forms": [
+    "forms/index",
     "forms/flavors/input/index",
     "forms/flavors/textarea/index",
     "forms/flavors/radio/index",
@@ -79,32 +84,31 @@ var components = {
     "forms/flavors/checkbox-alternate/index",
     "forms/flavors/multi-select/index",
     "forms/flavors/edit-dialog-for-touch/index",
-    "forms/flavors/form-element/index",
     "forms/flavors/horizontal-form/index",
     "forms/flavors/stacked-form/index",
     "forms/flavors/inline-form/index",
     "forms/flavors/compound-form/index"
   ],
 
-  // Tooltip
+  // Tooltip - This is deprecated
   "tooltips": [
     "tooltips/flavors/base/index"
   ],
 
   // Page Headers
   "page-headers": [
-    "page-headers/flavors/base/index",
+    "page-headers/index",
     "page-headers/flavors/record-home/index"
   ],
 
   // Panels
   "panels": [
-    "panels/flavors/detail/index"
+    "panels/index"
   ],
 
   // Popovers
   "popovers": [
-    "popovers/flavors/base/index",
+    "popovers/index",
     "popovers/flavors/tooltips/index",
     "popovers/flavors/panels/index",
     "popovers/flavors/nubbins/index"
@@ -112,7 +116,7 @@ var components = {
 
   // Menus
   "menus": [
-    "menus/flavors/dropdown/index",
+    "menus/index",
     "menus/flavors/picklist/index",
     "menus/flavors/action-overflow/index",
     "menus/flavors/action-overflow-for-touch/index"
@@ -120,19 +124,20 @@ var components = {
 
   // Datepicker
   "datepickers": [
-    "datepickers/flavors/base/index",
+    "datepickers/index",
     "datepickers/flavors/time/index"
   ],
 
   // Docked Composer
   "docked-composer": [
-    "docked-composer/flavors/base/index",
+    "docked-composer/index",
     "docked-composer/flavors/email/index",
     "docked-composer/flavors/task/index"
   ],
 
   // Publishers
   "publishers": [
+    "publishers/index",
     "publishers/flavors/discussion-feed/index",
     "publishers/flavors/comment/index"
   ],
@@ -145,12 +150,12 @@ var components = {
 
   // Modal
   "modals": [
-    "modals/flavors/base/index"
+    "modals/index"
   ],
 
   // Pills
   "pills": [
-    "pills/flavors/base/index"
+    "pills/index"
   ],
 
   // Process
@@ -161,6 +166,7 @@ var components = {
 
   // Spinners
   "spinners": [
+    "spinners/index",
     "spinners/flavors/small/index",
     "spinners/flavors/medium/index",
     "spinners/flavors/large/index",
@@ -170,7 +176,7 @@ var components = {
 
   // Title
   "tiles": [
-    "tiles/flavors/base/index",
+    "tiles/index",
     "tiles/flavors/board/index"
   ],
 
@@ -195,13 +201,14 @@ var components = {
   ],
 
   // Lookup
-  "lookups": ["lookups/index"],
+  "lookups": [
+    "lookups/index"
+  ],
 
   // Images
-  "images": ["images/flavors/avatar/index"],
-
-  // Badges
-  "badges": ["badges/flavors/base/index"],
+  "images": [
+    "images/flavors/avatar/index"
+  ],
 
   // Tables
   "data-tables": [
