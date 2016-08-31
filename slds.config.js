@@ -10,6 +10,11 @@ module.exports = {
   // on another value.
   //sldsCustomizations: "./_slds.config.scss",
   
+
+  // if global wrapper class is needed to prevent style bleed in Visualforce pages.
+  // set value to and empty string if no wrapper class is needed.
+  globalWrapperClass: '',
+
   styles: {
     "activity-timeline": true, 
     "breadcrumbs": true, 
