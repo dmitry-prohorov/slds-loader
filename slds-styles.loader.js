@@ -284,8 +284,7 @@ module.exports = function (content) {
   this.cacheable(true);
 
   var config = this.exec(content, this.resourcePath);
-  var start = (config.globalWrapperClass !== '') ? config.globalWrapperClass + ' {': '';
-  start +=
+  var start =
     //slds configs
       "@import             \"~@salesforce-ux/design-system/scss/design-tokens\";\n"
     + "@import             \"~@salesforce-ux/design-system/scss/config\";\n"
@@ -319,7 +318,9 @@ module.exports = function (content) {
     "\n@import             \"~@salesforce-ux/design-system/scss/utilities/index\";\n"
     + "@import             \"~@salesforce-ux/design-system/scss/vendor/html5boilerplate-print\";";
 
-  source += (config.globalWrapperClass !== '') ? '}': '';
+  if (config.globalWrapperClass !== '') {
+    source = config.globalWrapperClass + ' {' + source + '}';
+  }
 
   return source;
 }
