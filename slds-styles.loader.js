@@ -264,7 +264,7 @@ var components = {
   "tiles": [
     "tiles/index",
     "tiles/flavors/board/index"
-    
+
   ],
 
   // Tooltip - This is deprecated
@@ -310,7 +310,7 @@ module.exports = function (content) {
       var sldsStyles = components[style] || [];
       return sldsStyles.map(function(style) {
         return "@import \"~@salesforce-ux/design-system/scss/components/" + style + "\";";
-      }).join("\n"); 
+      }).join("\n");
   }).join("\n");
 
   //utilities
@@ -318,7 +318,7 @@ module.exports = function (content) {
     "\n@import             \"~@salesforce-ux/design-system/scss/utilities/index\";\n"
     + "@import             \"~@salesforce-ux/design-system/scss/vendor/html5boilerplate-print\";";
 
-  if (config.globalWrapperClass !== '') {
+  if (config.globalWrapperClass !== undefined && config.globalWrapperClass !== '') {
     source = config.globalWrapperClass + ' {' + source + '}';
   }
 
