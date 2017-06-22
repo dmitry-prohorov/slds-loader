@@ -1,9 +1,9 @@
 module.exports = {
   // Default for the style loading
-  styleLoader: "style-loader!css-loader!sass-loader",
+  styleLoaders: ["style-loader", "css-loader", "sass-loader"],
 
   // If you want to use the ExtractTextPlugin
-  //styleLoader: require("extract-text-webpack-plugin").extract("style-loader", "css-loader!sass-loader"),
+  //extractStyles: true,
 
   // Use sldsCustomizations to utilize other sass variables defined in
   // design-tokens.scss file. This is useful to set one customization value based

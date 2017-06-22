@@ -14,8 +14,15 @@ module.exports.pitch = function (remainingRequest) {
   }
 
   var config = require(configFilePath);
-  var styleLoader = config.styleLoader || "style-loader!css-loader!sass-loader";
 
-  return "require(" + JSON.stringify("-!" + styleLoader + "!" +
+  var styleLoaders = config.styleLoaders || ['style-loader', 'css-loader', 'sass-loader'];
+  if (config.extractStyles) {
+    styleLoaders = [
+      require('extract-text-webpack-plugin').loader().loader + '?{"omit":1,"remove":true}',
+      styleLoaders.join('!'),
+    ];
+  }
+
+  return 'require(' + JSON.stringify('-!' + styleLoaders.join('!') + '!' +
     require.resolve("./slds-styles.loader.js") + "!" + configFilePath) + ");";
 };
