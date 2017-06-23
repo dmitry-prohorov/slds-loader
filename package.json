@@ -19,7 +19,7 @@
   },
   "dependencies": {},
   "peerDependencies": {
-    "@salesforce-ux/design-system": ">=2.0.2",
+    "@salesforce-ux/design-system": ">=2.3.1",
     "css-loader": "*",
     "sass-loader": "*",
     "style-loader": "*"
