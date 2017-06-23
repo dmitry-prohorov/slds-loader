@@ -40,7 +40,6 @@ require("slds-loader");
 You can configurate slds-loader with two configuration files:
 
 * `slds.config.js`
-* and set `sldsCustomizations` option
 
 Add both files *next to each other* in your project. Then:
 
@@ -65,36 +64,20 @@ Example:
 
 ``` javascript
 module.exports = {
-  sldsCustomizations: "./_slds.config.scss",
-
+  // Default for the style loading
+  styleLoaders: ["style-loader", "css-loader", "sass-loader"],
   // if global wrapper class is needed to prevent style bleed in Visualforce pages.
   // set value to and empty string if no wrapper class is needed.
   globalWrapperClass: '.yourGlobalClassName',
-
-  styles: {
-    "activity-timeline": true,
-
-    "datepickers": true,
-    "modals": true,
-
-    "spinners": true,
-    "tabs": true,
-  }
+  type: 'visualforce'
 };
 ```
-
-### _slds.config.scss
-
-Imported after SLDS's default configuration, but before components and untilities.
-
-You may customize SLDS here.
-
-Example:
-
-``` sass
-$color-background-inverse: #eee;
-$color-background-path-complete: #ddd;
-```
+`type` property specifies which css dependencies will be imported:
+- [default](https://github.com/salesforce-ux/design-system/blob/master/ui/index.scss) *used if not specified by default*
+- [visualforce](https://github.com/salesforce-ux/design-system/blob/master/ui/index-vf.scss)
+- [scoped](https://github.com/salesforce-ux/design-system/blob/master/ui/index-scoped.scss)
+- [lightning](https://github.com/salesforce-ux/design-system/blob/master/ui/index-ltng.scss)
+- [internal](https://github.com/salesforce-ux/design-system/blob/master/ui/index-internal.scss)
 
 ### extract-text-webpack-plugin
 
@@ -104,11 +87,8 @@ Example:
 
 ``` javascript
 module.exports = {
-  styleLoader: require("extract-text-webpack-plugin").extract("style-loader", "css-loader!sass-loader"),
-
-  styles: {
-    ...
-  }
+  // If you want to use the ExtractTextPlugin
+  extractStyles: true
 };
 ```
 
