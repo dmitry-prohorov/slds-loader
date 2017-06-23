@@ -1,1 +1,1 @@
-require("style!css!sass!./slds-styles!./slds.config");
+require("style-loader!css-loader!sass-loader!./slds-styles!./slds.config");
